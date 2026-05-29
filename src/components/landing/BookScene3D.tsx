@@ -119,8 +119,8 @@ function Particle({ position }: { position: [number, number, number] }) {
   useFrame((state) => {
     if (!meshRef.current) return
     const t = state.clock.getElapsedTime() * speed + offset
-    meshRef.current.position.y = position[1] + Math.sin(t) * 0.3
-    (meshRef.current.material as THREE.MeshStandardMaterial).opacity = 0.2 + Math.sin(t * 1.5) * 0.15
+    meshRef.current.position.y = position[1] + Math.sin(t) * 0.3;
+    (meshRef.current.material as any).opacity = 0.2 + Math.sin(t * 1.5) * 0.15
   })
 
   return (
