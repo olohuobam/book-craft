@@ -62,3 +62,5 @@ capacitor.config.json
 
 .env*.local
 android/keystore.properties
+.env
+.env.local
